@@ -1,4 +1,4 @@
 {
-  "buildCommand": "bun run build:vercel",
+  "buildCommand": "tsx scripts/prebuild.mts && cross-env NODE_OPTIONS=--max-old-space-size=6144 next build --webpack && bun run postbuild",
   "installCommand": "npx pnpm@10.26.2 install"
 }
